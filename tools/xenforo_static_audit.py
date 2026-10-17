@@ -25,6 +25,7 @@ REPOSITORIES = {
     "Moderasyon Denetimi": ("Warext-Studios-XenForo-Moderasyon-Denetim-Sistemi", "upload/src/addons/Warext/ModerationAudit"),
     "Kullanıcı İçerik Yöneticisi": ("Warext-Studios-Kullanici-Icerik-Yoneticisi", "upload/src/addons/WarextStudios/UserContentManager"),
     "Portfolyo": ("Warext-Studios-Xenfero-Portfolyo-Sistemi", "upload/src/addons/Warext/Portfolio"),
+    "Özel Mesaj Moderasyonu": ("Warext-Studios-Xenfero-Private-Messages-Moderation-Add-on", "src/addons/Warext/PrivateModeration"),
     "Türkçe Yazım": ("Warext-Studios-Xenfero-Turkce-Yazim-Denetim-Eklentisi", "upload/src/addons/Warext/TurkishSpellCheck"),
     "Minecraft Vote": ("Warext-Studios-XenForo-Minecraft-Sunucu-Vote-Sistemi", "src/addons/Warext/MinecraftVote"),
 }
