@@ -18,7 +18,7 @@ REPOSITORIES = {
     "Davet / Referans": ("Warext-Studios-Xenfero-Davet-Referans-Sistemi", "upload/src/addons/WarextStudios/ReferralSystem"),
     "Konu Güncellik": ("Warext-Studios---Konu-Guncellik-Sistemi", "upload/src/addons/WarextStudios/ThreadFreshness"),
     "Klan / Grup": ("Warext-Studios-XenForo-Klan-Grup-Sistemi", "upload/src/addons/Warext/Clans"),
-    "GitHub Otomasyonu": ("Warext-Studios-Xenfero-Github-Baglanti-Otomasyonu", "src/addons/Warext/GitHubSync"),
+    "GitHub Otomasyonu": ("Warext-Studios-Xenfero-GitHub-Integration-Add-on", "src/addons/Warext/GitHubSync"),
     "İçerik AI Denetimi": ("Warext-Studios-Xenfero-Icerik-AI-Denetim-Sistemi", "upload/src/addons/Warext/AIContentInspector"),
     "Hata Bildirim": ("Warext-Studios-Xenfero-Hata-Bildirim-Sistemi", "upload/src/addons/Warext/HataBildirimi"),
     "S.S.S.": ("Warext-Studios-XenForo-S.S.S.-Sistemi", "upload/src/addons/Warext/SSS"),
