@@ -20,3 +20,5 @@ Static compatibility corrections tracked for the October audit: Referral 1.2.1, 
 - **Minecraft Vote v1.2.3:** added a vote-date/server ranking aggregation index to new installs and an upgrade step for existing installs; NuVotifier queued deliveries preload the Server relation; release regression checks validate both paths.
 
 No synthetic speedup percentage is claimed: production-scale SQL EXPLAIN, database benchmarks and licensed XenForo 2.3.13 runtime tests are still outstanding.
+
+- **Bug Reporting v1.2.2:** pre-normalizes the incoming description once per candidate batch rather than repeating Unicode normalization for up to 30 reports; a regression also corrected the decomposed Turkish capital İ behavior in text matching. CI + Release passed.
