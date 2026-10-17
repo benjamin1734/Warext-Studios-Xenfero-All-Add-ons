@@ -1,0 +1,40 @@
+name: XenForo 2.3.13 static compatibility audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/xenforo_static_audit.py'
+      - '.github/workflows/xenforo-2.3.13-static-audit.yml'
+      - 'README.md'
+  workflow_dispatch:
+  schedule:
+    - cron: '0 5 * * 1'
+
+permissions:
+  contents: read
+
+jobs:
+  static-compatibility:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+      - name: Audit all 12 Warext XenForo add-ons
+        run: python3 tools/xenforo_static_audit.py
+      - name: Publish step summary
+        if: always()
+        run: |
+          if [ -f xenforo-audit-report.md ]; then
+            cat xenforo-audit-report.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload static report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: warext-xenforo-2.3.13-static-report
+          path: xenforo-audit-report.md
+          if-no-files-found: warn
