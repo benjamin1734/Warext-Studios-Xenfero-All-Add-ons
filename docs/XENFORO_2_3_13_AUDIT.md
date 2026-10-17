@@ -12,3 +12,11 @@ Live verification checklist:
 5. Verify generated Release ZIP contains correct `upload/`, `addon.json`, `_data` and no outdated staging files.
 
 Static compatibility corrections tracked for the October audit: Referral 1.2.1, Turkish Writing 1.1.1, Thread Freshness 1.2.4, AI Content Inspector 1.2.1, Portfolio 1.2.3, and the central catalog's User Content Manager version 1.1.1.
+
+## 2026-10-17 performance pass
+
+- **Portfolio v1.2.4:** tag synchronization uses batched normalized-tag lookups, grouped use-count aggregation, a bulk orphan-map removal and a transaction, with fake-database regression checks for shared tags and deletion.
+- **Thread Freshness v1.2.5:** alternative suggestions load candidates as one finder batch, preloading forum relations and retaining visibility/order semantics; repository regression tests cover order and permissions.
+- **Minecraft Vote v1.2.3:** added a vote-date/server ranking aggregation index to new installs and an upgrade step for existing installs; NuVotifier queued deliveries preload the Server relation; release regression checks validate both paths.
+
+No synthetic speedup percentage is claimed: production-scale SQL EXPLAIN, database benchmarks and licensed XenForo 2.3.13 runtime tests are still outstanding.
